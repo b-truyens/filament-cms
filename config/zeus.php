@@ -8,7 +8,7 @@ return [
      *
      * breeze, daisy, another-portfolio
      */
-    'theme' => 'zeus',
+    'theme' => 'another-portfolio',
 
     /**
      * set the defualt layout component
@@ -19,7 +19,7 @@ return [
      * zeus::themes.daisy.layouts.app
      * zeus::themes.another-portfolio.layouts.app
      */
-    'layout' => 'zeus::components.app',
+    'layout' => 'zeus::themes.another-portfolio.layouts.app',
 
     /**
      * this will be set up the default seo site title. read more about it in 'laravel-seo'.

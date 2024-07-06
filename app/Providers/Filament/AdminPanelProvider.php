@@ -23,6 +23,7 @@ use Filament\SpatieLaravelTranslatablePlugin;
 
 use LaraZeus\Sky\SkyPlugin;
 use LaraZeus\Wind\WindPlugin;
+use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 
 
 class AdminPanelProvider extends PanelProvider
@@ -70,6 +71,7 @@ class AdminPanelProvider extends PanelProvider
                         hasAvatars: true, // Enables the avatar upload form component (default = false)
                         slug: 'my-profile' // Sets the slug for the profile page (default = 'my-profile')
                     ),
+                \TomatoPHP\FilamentUsers\FilamentUsersPlugin::make(),
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()->defaultLocales([config('app.locale')]),
                 SkyPlugin::make(),
@@ -85,7 +87,7 @@ class AdminPanelProvider extends PanelProvider
                     ])
                     ->uploadDisk('public')
                     ->uploadDirectory('logos')
-                    ->navigationGroupLabel('Wind'),
+                    ->navigationGroupLabel('Contact'),
                 ])
             ;
     }
